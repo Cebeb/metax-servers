@@ -1,0 +1,13 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins-server-tf
+    image: jenkins-tf
+    ports:
+      - "80:8080"
+    volumes:
+      - /home/ec2-user/jenkins-home:/var/jenkins_home
+    networks:
+      - net
+networks:
+  net:
